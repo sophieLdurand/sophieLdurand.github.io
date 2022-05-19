@@ -49,10 +49,20 @@
   ply.onclick = function() {
     ovr.style.display = "none";
     vid.play();
+    openFullscreen();
   }
   vid.onclick = function() {
     ovr.style.display = "block";
     vid.pause();
+  }
+  function openFullscreen() {
+    if (vid.requestFullscreen) {
+      vid.requestFullscreen();
+    } else if (vid.webkitRequestFullscreen) { /* Safari */
+      vid.webkitRequestFullscreen();
+    } else if (vid.msRequestFullscreen) { /* IE11 */
+      vid.msRequestFullscreen();
+    }
   }
   </script>
   
