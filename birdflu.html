@@ -52,8 +52,14 @@
     openFullscreen();
   }
   vid.onclick = function() {
-    ovr.style.display = "block";
-    vid.pause();
+    if (!vid.paused){
+      ovr.style.display = "block";
+      vid.pause();
+    }
+    else if (vid.paused){
+      ovr.style.display = "none";
+      vid.play();
+    }
   }
   function openFullscreen() {
     if (vid.requestFullscreen) {
@@ -64,6 +70,7 @@
       vid.msRequestFullscreen();
     }
   }
+  
   </script>
   
 </body
