@@ -51,18 +51,20 @@
     vid.play();
     openFullscreen();
   }
+  vid.onended = function(){
+    //document.exitFullscreen();
+    closeFullscreen();
+  }
   vid.onclick = function() {
     /*
     if (!vid.paused){
       ovr.style.display = "block";
       vid.pause();
-    }
-     */
-    else if (vid.paused){
+    }*/
+    if (vid.paused){
       ovr.style.display = "none";
       vid.play();
     }
-   
   }
   function openFullscreen() {
     if (vid.requestFullscreen) {
@@ -73,7 +75,13 @@
       vid.msRequestFullscreen();
     }
   }
-  
+  function closeFullscreen(){
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullScreen) { /* Safari */
+      document.webkitExitFullScreen();
+    }
+  }
   </script>
   
 </body
