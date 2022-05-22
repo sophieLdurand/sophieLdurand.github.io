@@ -38,7 +38,7 @@
       <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
     </svg> 
   </div>
-  <video id="vid" width="100%" height="100%" loop onclick="this.play()">
+  <video id="vid" width="100%" height="100%" onclick="this.play()">
   <source src="https://sophieldurand.github.io/birdflu%20vp9.webm" type="video/webm">
   </video>
   
@@ -52,14 +52,17 @@
     openFullscreen();
   }
   vid.onclick = function() {
+    /*
     if (!vid.paused){
       ovr.style.display = "block";
       vid.pause();
     }
+     */
     else if (vid.paused){
       ovr.style.display = "none";
       vid.play();
     }
+   
   }
   function openFullscreen() {
     if (vid.requestFullscreen) {
