@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>birdflu</title>
 </head>
 <style>
@@ -32,57 +33,11 @@
   }
 </style>
 <body>
-  <div id="playoverlay" class='overlay'>
-    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
-      <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
-      <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
-    </svg> 
-  </div>
-  <video id="vid" width="100%" height="100%" onclick="this.play()">
-  <source src="https://sophieldurand.github.io/birdflu%20vp9.webm" type="video/webm">
+  <video id="vid" width="100%" height="100%" poster="/birdflu_thumbnail.jpg" controls="true">
+  <source src="https://sophieldurand.github.io/birdflu_video.mp4" type="video/mp4">
   </video>
   
   <script>
-  var vid = document.getElementById("vid");
-  var ply = document.getElementById("playoverlay");
-  var ovr = document.getElementById("playoverlay");
-  ply.onclick = function() {
-    ovr.style.display = "none";
-    vid.play();
-    openFullscreen();
-  }
-  vid.onended = function(){
-    //document.exitFullscreen();
-    closeFullscreen();
-    ovr.style.display = "block";
-  }
-  vid.onclick = function() {
-    /*
-    if (!vid.paused){
-      ovr.style.display = "block";
-      vid.pause();
-    }*/
-    if (vid.paused){
-      ovr.style.display = "none";
-      vid.play();
-    }
-  }
-  function openFullscreen() {
-    if (vid.requestFullscreen) {
-      vid.requestFullscreen();
-    } else if (vid.webkitRequestFullscreen) { /* Safari */
-      vid.webkitRequestFullscreen();
-    } else if (vid.msRequestFullscreen) { /* IE11 */
-      vid.msRequestFullscreen();
-    }
-  }
-  function closeFullscreen(){
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullScreen) { /* Safari */
-      document.webkitExitFullScreen();
-    }
-  }
   </script>
   
 </body
