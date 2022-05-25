@@ -6,31 +6,44 @@
   <title>phonecalls</title>
 </head>
 <style>
-  .audio_container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .centered_container {
+  height: auto;
+  text-align: center;
+  }
+  .audio_group{
+  display: inline-block;
+  font-size: 4vmax;
+  text-align: center;
+  margin-top: 9%;
+  }
+  .names{
+    margin: 2%;
   }
   
 </style>
 <body>
-  <div class="audio_container"> 
+  <div class="centered_container"> 
     
-    <div> a walk is taken </div>
-    <audio id="recording" controls="true">
-      <source src="walk.mp3" type="audio/mpeg">
-    </audio>
+    <div class="audio_group">
+      <div class="names"> a walk is taken </div>
+      <audio id="recording" controls="true">
+        <source src="https://sophieldurand.github.io/birdflu_video.mp4" type="audio/mpeg">
+      </audio>
+    </h><br>
     
-    <div> a map is made </div>
-    <audio id="recording" controls="true">
-      <source src="map.mp3" type="audio/mpeg">
-    </audio>
+    <div class="audio_group">
+      <div class="names"> a map is mad </div>
+      <audio id="recording" controls="true">
+        <source src="https://sophieldurand.github.io/birdflu_video.mp4" type="audio/mpeg">
+      </audio>
+    </div><br>
     
-    <div> [a] nest(s) assembled </div>
-    <audio id="recording" controls="true">
-      <source src="nests.mp3" type="audio/mpeg">
-    </audio>
+    <div class="audio_group">
+      <div class="names"> [a] nest(s) assembled </div>
+      <audio id="recording" controls="true">
+        <source src="https://sophieldurand.github.io/birdflu_video.mp4" type="audio/mpeg">
+      </audio>
+    </div>
     
   </div>
   
