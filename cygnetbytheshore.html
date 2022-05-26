@@ -6,19 +6,30 @@
   <title>cygnet by the shore</title>
 </head>
 <style>
-  .audio_container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .centered_container {
+  height: auto;
+  text-align: center;
+  }
+  .audio_group{
+  display: inline-block;
+  font-size: 3vmax;
+  text-align: center;
+  margin-top: 15%;
+  }
+  .names{
+    margin: 2%;
   }
   
 </style>
 <body>
-  <div class="audio_container"> 
-    <audio id="recording" controls="true">
-      <source src="storyfortheshore.mp3" type="audio/mpeg">
-    </audio>
+  <div class="centered_container"> 
+    
+    <div class="audio_group">
+      <div class="names"> a walk is taken </div>
+      <audio id="recording" controls="true">
+        <source src="storyfortheshore.mp3" type="audio/mpeg">
+      </audio>
+    </div><br>
   </div>
   
   <script>
